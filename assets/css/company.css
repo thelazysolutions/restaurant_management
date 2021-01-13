@@ -1,0 +1,83 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+.navbar {
+    height: 80px;
+    background: #111;
+    z-index: 1;
+}
+#sidebar {
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    width: 200px;
+    height: 100vh;
+    background: #111;
+    transition: left 500ms ease-in-out;
+}
+#sidebar.active {
+    left: 0px;
+}
+#sidebar .links .link {
+    padding: 10px;
+    border-bottom: 1px solid #222;
+}
+#sidebar .links .link a {
+    color: #eee;
+    text-decoration: none;
+    font-family: "Raleway";
+}
+#sidebar .links .link:hover {
+    background: #222;
+    cursor: pointer;
+}
+#sidebar #toggle-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: #111;
+    top: 20px;
+    right: -60px;
+    width: 40px;
+    cursor: pointer;
+}
+#sidebar #toggle-btn span {
+    width: 65%;
+    height: 4px;
+    background: #eee;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+#sidebar #toggle-btn span:nth-child(1) {
+    top: 30%;
+}
+#sidebar #toggle-btn span:nth-child(3) {
+    top: 70%;
+}
+#sidebar.active #toggle-btn span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+#sidebar.active #toggle-btn span:nth-child(2) {
+    display: none;
+}
+#sidebar.active #toggle-btn span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.full{
+    height: 89vh;
+    background-color: #e6e6e6;
+}
+.btn.btn-outline-info.btn-sm {
+    color: white !important;
+    background: #ec9a29 !important;
+}
+.btn {
+    color: white !important;
+    background: #ec9a29 !important;
+}
